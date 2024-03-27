@@ -6,6 +6,8 @@
 
 <script setup>
 import LayOut from '@/components/LayOut.vue'
+
+
 </script>
 
 <style>
