@@ -1,4 +1,6 @@
 <template>
+  <ProductPage :authorData="author"></ProductPage>
+
   <div class="hello">
     <h1>{{ msg }}</h1>
     {{ name }}
@@ -31,10 +33,12 @@
     </li>
 
   </div>
+
 </template>
 
 <script setup>
 import { ref, reactive, computed } from 'vue'
+import ProductPage from '@/components/ProductList.vue'
 
 const product = {
   name: "Book",
