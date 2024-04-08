@@ -2,7 +2,9 @@ import { createApp } from 'vue'
 import Product from '@/components/ProductList.vue'
 import HelloWorldPage from '@/components/HelloWorld.vue'
 import {createWebHistory,createRouter} from 'vue-router'
-
+import AddStudent from '@/components/Student/AddStudent.vue'
+import "bootstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
 import App from './App.vue'
 
 const routes = [
@@ -15,6 +17,11 @@ const routes = [
         path: "/product",
         component: Product,
         name: 'Product',
+    },
+    {
+        path: "/addstudent",
+        component: AddStudent,
+        name: 'AddStudent',
     },
 ]
 
