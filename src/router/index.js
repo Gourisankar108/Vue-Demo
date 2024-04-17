@@ -36,21 +36,21 @@ const router = createRouter({
     routes: routes,
 })
 
-router.beforeEach((to, from, next) => {
-    const authStore = useAuthStore();
-    const auth = authStore.isAuthenticated;
-    if ((to.meta.authreq)) {
-      if (!auth) {
-        return next({ name: 'login' });
-      }
-      else {
-        return next();
-      }
-    }
-    else if (to.name == 'login' && auth) {
-      return next({ path: '/product' });
-    }
-    return next();
-  });
+// router.beforeEach((to, from, next) => {
+//     const authStore = useAuthStore();
+//     const auth = authStore.isAuthenticated;
+//     if ((to.meta.authreq)) {
+//       if (!auth) {
+//         return next({ name: 'login' });
+//       }
+//       else {
+//         return next();
+//       }
+//     }
+//     else if (to.name == 'login' && auth) {
+//       return next({ path: '/product' });
+//     }
+//     return next();
+//   });
 
 export default router;
